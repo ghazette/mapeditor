@@ -16,10 +16,6 @@ function initEnv() {
         mouseMove: 0,
         mouseOver: 0,
         cell: {
-            pos: {
-                x: 0,
-                y: 0
-            },
             size: {
                 x: 8,
                 y: 8
@@ -81,6 +77,7 @@ function dragPendingMessage(ctx) {
 function drawPreSelection() {
     if (global.workflow.tileseteditor.mouseMove === 1)
     {
+        global.workflow.tileseteditor.cell.isSelected = 1
         setDrawSelectionEndPoint()
         global.workflow.tileseteditor.ctx.beginPath()
         global.workflow.tileseteditor.ctx.lineWidth = 1
@@ -91,7 +88,7 @@ function drawPreSelection() {
 }
 
 function drawSelection() {
-    if (global.workflow.tileseteditor.mouseDownLeft === 0) {
+    if (global.workflow.tileseteditor.mouseDownLeft === 0 && global.workflow.tileseteditor.cell.isSelected) {
         global.workflow.tileseteditor.ctx.beginPath()
         global.workflow.tileseteditor.ctx.lineWidth = 1
         global.workflow.tileseteditor.ctx.rect(global.workflow.tileseteditor.curSelection.x1, global.workflow.tileseteditor.curSelection.y1, global.workflow.tileseteditor.curSelection.x2, global.workflow.tileseteditor.curSelection.y2)
