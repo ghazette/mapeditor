@@ -1,0 +1,25 @@
+{
+  "name": "Tile_Map_Editor",
+  "version": "1.0.0",
+  "description": "A minimal Tile map editor",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "ghazette",
+  "devDependencies": {
+    "electron": "^3.0.0",
+    "jquery": "^3.3.1",
+    "jquery-mask-plugin": "^1.14.15"
+  },
+  "dependencies": {
+    "popper": "^1.0.1"
+  }
+}
